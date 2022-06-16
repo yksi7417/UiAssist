@@ -7,9 +7,9 @@ using namespace std;
 namespace TestWindow {
 	TEST(TestWinClose, IfWindowsExistsCloseTheWindow) {
 		HINSTANCE errorCode = ShellExecute(NULL, L"open", L"C:\\Windows\\system32\\notepad.exe", L"OCRLibText.txt", NULL, SW_SHOWDEFAULT);
-		OCRLib::Window window("OCRLibText.txt Notepad");
+		OCRLib::Window window("OCRLibText.txt - Notepad");
 		EXPECT_EQ(0, 0);
-		EXPECT_TRUE(true);
+		EXPECT_TRUE(window.exists());
 	}
 }
 
