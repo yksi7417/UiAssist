@@ -24,8 +24,8 @@ namespace OCRLib
         OCRLIB_API ~Window();
 
     private:
-        struct WindowImplDetails;
-        std::unique_ptr<WindowImplDetails> d_ptr_;
+        struct WindowPrivateMembers;
+        std::unique_ptr<WindowPrivateMembers> d_ptr_;
 
     private:
         // Explicitly Disable access for the followings
