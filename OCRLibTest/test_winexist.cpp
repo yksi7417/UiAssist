@@ -3,9 +3,9 @@
 using namespace std;
 
 namespace Windows {
-	TEST(TestWinExist, IfWindowsExistsReturnTrue) {
-		MessageBox(NULL, L"hello world", L"OCRLib TestWindow", 0);
-		EXPECT_EQ(1, 1);
+	TEST(TestWinClose, IfWindowsExistsCloseTheWindow) {
+		HINSTANCE errorCode = ShellExecute(NULL, L"open", L"C:\\Windows\\system32\\notepad.exe", L"OCRLibText.txt", NULL, SW_SHOWDEFAULT);
+		EXPECT_EQ(0, 0);
 		EXPECT_TRUE(true);
 	}
 }
